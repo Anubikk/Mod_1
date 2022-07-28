@@ -1,0 +1,34 @@
+/***********************************************************************
+Write a recursive function called `flatten` that takes a single array with
+any number of nested arrays and returns and array with all the nested
+contents on one level.
+
+Examples:
+
+flatten([]); // []
+flatten([1, 2]); // [1, 2]
+flatten([1, [2, [3]]]); // [1, 2, 3]
+***********************************************************************/
+function flatten(arr){
+//if arr is empty return empty arr
+  if(arr.length === 0){
+    return [];
+//if arr[0] is an arr return flat
+  }else if(Array.isArray(arr[0])){
+    return flatten(arr[0]).concat(flatten(arr.slice(1)));
+//if arr[0] is not an arr return [arr[0]] + flat 
+  }else{
+    return [arr[0]].concat(flatten(arr.slice(1)));
+  }
+}
+
+
+
+
+
+/**************DO NOT MODIFY ANYTHING UNDER THIS LINE*****************/
+try {
+  module.exports = flatten;
+} catch (e) {
+  module.exports = null;
+}

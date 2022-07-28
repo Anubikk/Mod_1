@@ -1,0 +1,21 @@
+/***********************************************************************
+Write a function named `restSum` that accepts all incoming parameters and sums them.
+
+**Hint**: Use rest parameter syntax!
+
+Examples:
+restSum(3,5,6); // => 14
+restSum(1, 2, 3, 4, 5, 6, 7, 8, 9); // => 45
+restSum(0); // => 0
+***********************************************************************/
+
+function restSum(...otherNums) {
+  let sum = 0; //create a variable to store the sum
+  otherNums.forEach(function(num){ //loop through the array
+  sum += num; //add the number to the sum
+  });
+  return sum; //return the sum
+}
+
+/**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
+module.exports = restSum;
