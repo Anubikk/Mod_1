@@ -20,7 +20,7 @@ factorial(5); // 120
     if (num === 1) { // base case - if num is 1, return 1
       return 1;
     }
-    return num * factorial(num - 1); 
+    return num * factorial(num - 1); // recursive case - multiply num by the factorial of num - 1 and call factorial with num - 1
   }
 
 
